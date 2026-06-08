@@ -16,3 +16,9 @@ System blocks it using version check.
 
 Any modification in firmware changes SHA-256 hash.
 Verification fails and update is rejected.
+
+## Mitigation Summary
+
+- MITM attack → blocked by digital signature verification
+- Replay attack → blocked by version control system
+- Firmware tampering → detected using SHA-256 hash mismatch
