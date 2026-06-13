@@ -32,3 +32,6 @@ with open("../keys/public_key.pem", "wb") as f:
 
 print("Private Key saved successfully!")
 print("Public Key saved successfully!")
+
+print(private_key)
+print(public_key)

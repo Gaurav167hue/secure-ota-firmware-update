@@ -1,12 +1,11 @@
 import hashlib
-
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import ec
 
 
 # STEP 1 - Read firmware file
-with open("..d/firmware/firmware.bin", "rb") as file:
+with open("../firmware/firmware.bin", "rb") as file:
     firmware_data = file.read()
 
 
