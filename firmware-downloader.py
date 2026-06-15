@@ -6,11 +6,11 @@ DOWNLOAD_DIR = "downloads"
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
 # Replace these URLs with your actual GitHub raw URLs
-FIRMWARE_URL = "https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/firmware/firmware.bin"
+FIRMWARE_URL = "https://github.com/Gaurav167hue/secure-ota-firmware-update/blob/feature/Member1-pki-firmware-signing/firmware/firmware.bin"
 
 SIGNATURE_URL = "https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/Output/signature.sig"
 
-PUBLIC_KEY_URL = "https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/keys/public_key.pem"
+PUBLIC_KEY_URL = "https://github.com/Gaurav167hue/secure-ota-firmware-update/blob/feature/Member1-pki-firmware-signing/keys/public_key.pem"
 
 
 def download_file(url, filename):
