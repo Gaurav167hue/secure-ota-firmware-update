@@ -1,0 +1,45 @@
+# Reports Directory Structure.
+
+This folder contains all project-related reports generated during the development, testing, deployment, and completion phases of the **Secure OTA Firmware Update and Code Signing Infrastructure** project.
+
+## File Structure
+
+```text
+reports/
+├── README.md
+├── weekly_progress_report.md
+├── integration_test_report.md
+├── test_summary_report.md
+├── security_assessment_report.md
+├── deployment_report.md
+├── project_completion_report.md
+└── final_project_report.md
+```
+
+## Report Descriptions
+
+| File                              | Purpose                                                                                                                  |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **weekly_progress_report.md**     | Records weekly activities, completed tasks, challenges, and achievements throughout the project.                         |
+| **integration_test_report.md**    | Documents integration testing results for different modules and components.                                              |
+| **test_summary_report.md**        | Provides an overall summary of executed test cases and their outcomes.                                                   |
+| **security_assessment_report.md** | Contains findings from security evaluations, vulnerability analysis, and mitigation measures.                            |
+| **deployment_report.md**          | Describes deployment procedures, environment setup, and deployment status.                                               |
+| **project_completion_report.md**  | Summarizes project milestones, deliverables, and overall accomplishments.                                                |
+| **final_project_report.md**       | Serves as the comprehensive report containing architecture, implementation, testing, security analysis, and conclusions. |
+
+## Purpose
+
+These reports ensure:
+
+- Proper project documentation.
+- Traceability of development and testing activities.
+- Security and quality assurance records.
+- Deployment and completion tracking.
+- Final project documentation for review and submission.
+
+---
+
+**Project:** Secure OTA Firmware Update and Code Signing Infrastructure
+**Documentation Module:** Reports
+**Maintained By:** Versioning and Documentation Team
