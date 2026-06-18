@@ -111,15 +111,3 @@ The reports contained in this directory help:
 
 These reports collectively document the development, testing, deployment, and maintenance aspects of the Secure OTA Firmware Update and Code Signing Infrastructure project.
 
-## Folder Structure.
-
-docs/
-└── reports/
-├── README.md
-├── weekly_progress_report.md
-├── integration_test_report.md
-├── test_summary_report.md
-├── security_assessment_report.md
-├── deployment_report.md
-├── project_completion_report.md
-└── final_project_report.md
