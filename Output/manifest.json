@@ -1,0 +1,8 @@
+{
+    "version": "1.0.0",
+    "build_id": "build-001",
+    "firmware_file": "firmware.bin",
+    "signature_file": "signature.sig",
+    "hash_algorithm": "SHA-256",
+    "firmware_hash": "50206b78bae43614111c2cb78b8df42904e96f8d3acce4dc5cc88105fb61e237"
+}

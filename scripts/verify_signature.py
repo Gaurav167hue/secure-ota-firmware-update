@@ -6,7 +6,7 @@ from cryptography.exceptions import InvalidSignature
 
 
 # STEP 1 - Load firmware
-with open("../firmware/firmware.bin", "rb") as firmware_file:
+with open("firmware/firmware.bin", "rb") as firmware_file:
     firmware_data = firmware_file.read()
 
 print("Firmware Loaded Successfully")
@@ -17,14 +17,14 @@ print("Firmware Hash Generated Successfully")
 
 
 # STEP 2 - Load signature
-with open("../Output/signature.sig", "rb") as sig_file:
+with open("Output/signature.sig", "rb") as sig_file:
     signature = sig_file.read()
 
 print("Signature Loaded Successfully")
 
 
 # STEP 3 - Load public key
-with open("../keys/public_key.pem", "rb") as key_file:
+with open("keys/public_key.pem", "rb") as key_file:
     public_key = serialization.load_pem_public_key(
         key_file.read()
     )

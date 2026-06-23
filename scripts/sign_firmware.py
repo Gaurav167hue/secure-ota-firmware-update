@@ -5,7 +5,7 @@ from cryptography.hazmat.primitives.asymmetric import ec
 
 
 # STEP 1 - Read firmware file
-with open("../firmware/firmware.bin", "rb") as file:
+with open("firmware/firmware.bin", "rb") as file:
     firmware_data = file.read()
 
 
@@ -16,7 +16,7 @@ print("Firmware Hash Generated Successfully")
 
 
 # STEP 3 - Load private key
-with open("../keys/private_key.pem", "rb") as key_file:
+with open("keys/private_key.pem", "rb") as key_file:
     private_key = serialization.load_pem_private_key(
         key_file.read(),
         password=None
@@ -35,7 +35,7 @@ print("Digital Signature Generated Successfully")
 
 
 # STEP 5 - Save signature
-with open("../Output/signature.sig", "wb") as sig_file:
+with open("Output/signature.sig", "wb") as sig_file:
     sig_file.write(signature)
 
 print("Signature saved to Output/signature.sig")
