@@ -1,49 +1,45 @@
-import json
-import hashlib
 import os
+import shutil
 
+# Source files
 FIRMWARE_PATH = "firmware/firmware.bin"
 SIGNATURE_PATH = "Output/signature.sig"
-MANIFEST_PATH = "Output/manifest.json"
 
-VERSION = "1.0.0"
-BUILD_ID = "build-001"
-
-
-def calculate_sha256(file_path):
-    sha256_hash = hashlib.sha256()
-
-    with open(file_path, "rb") as file:
-        while chunk := file.read(4096):
-            sha256_hash.update(chunk)
-
-    return sha256_hash.hexdigest()
+# Simulated OTA server storage
+SERVER_STORAGE = "server_storage"
 
 
-def create_manifest():
-    if not os.path.exists(FIRMWARE_PATH):
-        print("Firmware file not found.")
+def upload_to_server(file_path):
+    """
+    Upload a file to simulated server storage.
+    """
+
+    if not os.path.exists(file_path):
+        print(f"[ERROR] {file_path} does not exist.")
         return
 
-    firmware_hash = calculate_sha256(FIRMWARE_PATH)
+    os.makedirs(SERVER_STORAGE, exist_ok=True)
 
-    manifest = {
-        "version": VERSION,
-        "build_id": BUILD_ID,
-        "firmware_file": "firmware.bin",
-        "signature_file": "signature.sig",
-        "hash_algorithm": "SHA-256",
-        "firmware_hash": firmware_hash
-    }
+    destination = os.path.join(
+        SERVER_STORAGE,
+        os.path.basename(file_path)
+    )
 
-    os.makedirs("Output", exist_ok=True)
+    shutil.copy2(file_path, destination)
 
-    with open(MANIFEST_PATH, "w") as manifest_file:
-        json.dump(manifest, manifest_file, indent=4)
+    print(f"[SUCCESS] Uploaded {file_path}")
+    print(f"Destination: {destination}")
+    print("-" * 50)
 
-    print("Manifest created successfully.")
-    print(f"Manifest saved to: {MANIFEST_PATH}")
+
+def main():
+    print("\nStarting firmware upload process...\n")
+
+    upload_to_server(FIRMWARE_PATH)
+    upload_to_server(SIGNATURE_PATH)
+
+    print("\nFirmware upload completed successfully.")
 
 
 if __name__ == "__main__":
-    create_manifest()
+    main()
