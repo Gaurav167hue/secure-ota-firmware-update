@@ -1,0 +1,3 @@
+From firmware.bin so
+
+SHA256: 50206b78bae43614111c2cb78b8df42904e96f8d3acce4dc5cc88105fb61e237
