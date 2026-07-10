@@ -16,15 +16,6 @@ PUBLIC_KEY_URL = "https://raw.githubusercontent.com/Gaurav167hue/secure-ota-firm
 def download_file(url, filename):
     try:
         response = requests.get(url)
-        print(f"Downloading: {url}")
-        print(f"Status Code:
-        {response.status_code}")
-    else: 
-        print(f"Failed to download)
-        {filename}") 
-            print(response.status_code)
-            print(response.text[:200])
-
         if response.status_code == 200:
             filepath = os.path.join(DOWNLOAD_DIR, filename)
 
